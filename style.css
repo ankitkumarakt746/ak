@@ -391,3 +391,34 @@ section{
 /* Blogs (Page 4) */
 
 /*--------------------------------------*/
+
+
+
+
+
+/*-----------------Footer---------------*/
+
+/* Contact */
+
+.contact__icon-list{
+    display: flex;
+    justify-content: center;
+}
+
+.contact__icon--mask{
+    margin: 0.5rem;
+}
+
+.contact__icon--anchortag{
+    display: block;
+    padding: 1.25rem 1.75rem;
+}@media screen and (max-width: 600px){
+    .contact__icon--anchortag{
+        padding: 1.25rem 1rem;
+    }
+}
+
+.contact__icon{
+}
+
+/*--------------------------------------*/
