@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root{
+    --custom-black1: #242424;
+    --custom-white1: #F0F9FF;
+    --custom-dblue: #0096ff;
+    --custom-lblue: #00d7ff;
+}
+
+/*--------------General-----------------*/
+
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section:nth-child(even){
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3, h4, h5, h6, span{
+    color: var(--custom-black1);
+    text-align: center;
+    line-height: 1.25;
+}
+
+h1{
+    font-size: 36px;
+}
+
+li{
+    list-style-type: none;
+}
+
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    margin-top: 4rem;
+}
+
+/*--------------------------------------*/
+
+
+
+
+
+/*----------------Header----------------*/
+
+/* Navigation Bar */
+nav{
+    height: 4rem;
+    margin: 0 auto;
+    background-color: var(--custom-white1);
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.nav__r-links{
+    display: flex;
+}
+
+.nav__link--anchortag{
+    margin: 0 1.5rem;
+    color: var(--custom-black1);
+    text-decoration: none;
+    font-weight: 700;
+}.nav__link--anchortag:hover{
+    color: var(--custom-lblue);
+}
+
+.nav__link--resume-anchortag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--custom-dblue);
+}
+
+.nav__link--contact-anchortag{
+    color: white;
+    background-color: var(--custom-dblue);
+    padding: 0.5rem 1.25rem;
+    border-radius: 3.125rem;
+}.nav__link--contact-anchortag:hover{
+    color: white;
+    background-color: var(--custom-lblue);
+}
+
+.nav__bar,
+.nav__bar--dropdown {
+    display: none;
+}
+
+
+
+/* For Small Scree with < 600px  */
+
+@media screen and (max-width: 600px){
+    .nav__r-links li:not(:last-child){
+        display: none;
+    }
+    .nav__bar{
+        display: block;
+        float: right;
+    }
+    .nav__bar--icon{
+        color: var(--custom-dblue);
+    }
+    .nav__bar:hover .nav__bar--icon {
+        /*color: white;
+        background-color: var(--custom-lblue);*/
+        color: var(--custom-lblue);
+    }
+    .nav__bar--dropdown {
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 90;
+    }
+
+    .nav__bar:hover .nav__bar--dropdown{
+        display: block;
+    }
+    .nav__bar--dropdown-anchortag {
+        color: var(--custom-black1);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .nav__bar--dropdown-anchortag:hover {
+        /*background-color: var(--custom-white1);*/
+        background-color: #f1f1f1;
+    }
+}
+
+/*--------------------------------------*/
+
+
+
+
+
+/*---------------Main Body--------------*/
+
+/* General Main */
+section{
+    height: 100%;
+    min-height: 44rem;
+}
+
+.container {
+    padding: 3.125rem 0;
+}
+
+.container__row {
+    width: 100%;
+    max-width: 54rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+
+.section__title {
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Intro (Page 1) */
+
+#intro{
+
+}
+
+.intro__container{
+    height: 100%;
+    min-height: 40rem;
+    padding: 10rem 0;
+}
+
+.intro__container--row{
+
+}
+
+.intro__list{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.intro__list--item{
+    display: inline-block;
+}
+
+.intro__text--hello {
+    /*font-size: 1.5rem;*/
+    letter-spacing: 0.08rem;
+    text-align: left;
+}
+
+.intro__text--name{
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+    .intro__container{
+        padding: 2rem 0;
+    }
+    .intro__text--hello, .intro__text--name{
+        text-align: center;
+    }
+    .intro__image-mask{
+        float: none;
+    }
+    .intro__image-container{
+        margin: 2vh 20vw;
+    }
+}
+
+.intro__image-container{
+
+}
+
+.intro__image-mask{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    float: right;
+}
+
+.intro__image{
+    width: 100%;
+    /*transform: scale(1.1);*/
+}
+
+
+/* Skills (Page 2) */
+
+.language__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.language{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.language__image-mask{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.language__image{
+    width: 100%;
+    max-width: 6.25rem;
+    transition: all 300ms;
+}.language:hover .language__image{
+    filter: brightness(80%);
+    opacity: 0.80;
+    transform: scale(0.8);
+}
+
+.language__name{
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    font-size: 1.25rem;
+}.language:hover .language__name{
+    transform: scale(1);
+}
+
+
+/* Projects (Page 3) */
+
+.project__list {
+    padding-top: 2.5rem;
+}
+
+.project{
+    margin-bottom: 8rem;
+}
+
+.project__mask{
+    display: flex;
+    box-shadow: 0 1.25rem 5rem rgba(0, 0, 0, 0.45);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+}.project__mask:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index: 2;
+}.project:hover .project__mask:before{
+    opacity: 0.7;
+}
+
+.project__image{
+    width: 100%;
+    transition: all 500ms ease;
+}.project:hover .project__image{
+    transform: scale(1.1);
+    filter: blur(0.25rem);
+}
+
+.project__description{
+    position: absolute;
+    top: 50%;
+    left: 5.5rem;
+    transform: translateY(100%);
+    max-width: 34.25rem;
+    z-index: 3;
+    opacity: 0;
+    transition: transform 450ms, opacity 300ms;
+}.project:hover .project__description{
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project__description--title,
+.project__description--sub-title,
+.project__description--details{
+    text-align: left;
+    color: #fff;
+}
+
+.project__description--title{
+    font-size: 2.5rem;
+}
+
+.project__description--details{
+    margin: 1rem 0;
+}
+
+.project__description--link{
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    text-align: left;
+}
+
+.project__description--link-icon{
+    color: white;
+}
+
+/* Blogs (Page 4) */
+
+/*--------------------------------------*/
