@@ -215,7 +215,6 @@ section{
 }
 
 .intro__list--item{
-    display: inline-block;
 }
 
 .intro__text--hello {
@@ -240,9 +239,13 @@ section{
     .intro__image-mask{
         float: none;
     }
-    .intro__image-container{
-        margin: 2vh 20vw;
+    .intro__list{
+        justify-content: center;
     }
+    /*.intro__image-container{
+        margin: 2vh 20vw;
+    }*/
+
 }
 
 .intro__image-container{
