@@ -80,10 +80,6 @@ nav{
     overflow: hidden;
 }
 
-.nav__r-links{
-    display: flex;
-}
-
 .nav__link--anchortag{
     margin: 0 1.5rem;
     color: var(--custom-black1);
@@ -97,6 +93,10 @@ nav{
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--custom-dblue);
+}
+
+.nav__r-links {
+    display: flex;
 }
 
 .nav__link--contact-anchortag{
@@ -119,6 +119,9 @@ nav{
 /* For Small Scree with < 600px  */
 
 @media screen and (max-width: 600px){
+    .nav__link--resume-anchortag{
+        margin: 0;
+    }
     .nav__r-links li:not(:last-child){
         display: none;
     }
