@@ -402,6 +402,10 @@ footer{
     background-color: var(--custom-dblue);
 }
 
+.footer__container{
+    padding: 4rem 0;
+}
+
 /* Contact */
 
 .contacts__heading{
@@ -447,6 +451,15 @@ footer{
     transition: all 300ms;
 }.contact__icon--mask:hover .contact__name{
     transform: scale(1);
+}@media screen and (max-width: 600px){
+    .contact__name{
+        transform: scale(1);
+    }
+}
+
+.contact__copyright{
+    color: white;
+    padding-top: 4rem;
 }
 
 /*--------------------------------------*/
