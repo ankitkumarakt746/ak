@@ -363,6 +363,11 @@ section{
 }.project:hover .project__description{
     opacity: 1;
     transform: translateY(-50%);
+}@media screen and (max-width: 600px){
+    .project__description{
+        left: 1.5rem;
+        right: 1.5rem;
+    }
 }
 
 .project__description--title,
@@ -370,6 +375,10 @@ section{
 .project__description--details{
     text-align: left;
     color: #fff;
+}@media screen and (max-width: 600px){
+    .project__description--details{
+        display: none;
+    }
 }
 
 .project__description--title{
@@ -406,7 +415,7 @@ footer{
 }
 
 .footer__container{
-    padding: 4rem 0 2.5rem;
+    padding: 4rem 0 1.5rem;
 }
 
 /* Contact */
@@ -460,9 +469,14 @@ footer{
     }
 }
 
-.contact__copyright{
+.credits{
     color: white;
     padding-top: 4rem;
+    font-weight: normal;
+}
+
+.credit__link{
+    color: white;
 }
 
 /*--------------------------------------*/
