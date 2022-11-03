@@ -311,7 +311,7 @@ section{
     transform: scale(1);
 }@media screen and (max-width: 600px){
     .too-large__lang-name{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
