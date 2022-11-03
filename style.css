@@ -402,6 +402,114 @@ section{
 
 /* Blogs (Page 4) */
 
+.blog__list {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog {
+    margin-bottom: 8rem;
+    width: 40%;
+    margin: 0 2rem 4rem;
+}@media screen and (max-width: 600px){
+    .blog{
+        width: 100%;
+    }
+}
+
+.blog__mask {
+    display: flex;
+    box-shadow: 0 1.25rem 5rem rgba(0, 0, 0, 0.45);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog__mask:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: opacity 450ms ease;
+    z-index: 2;
+}
+
+.blog:hover .blog__mask:before {
+    opacity: 0.7;
+}
+
+.blog__image {
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.blog:hover .blog__image {
+    transform: scale(1.1);
+    filter: blur(0.25rem);
+}
+
+.blog__description {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    right: 2rem;
+    transform: translateY(100%);
+    max-width: 34.25rem;
+    z-index: 3;
+    opacity: 0;
+    transition: transform 450ms, opacity 300ms;
+}
+
+.blog:hover .blog__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 600px) {
+    .blog__description {
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+.blog__description--title{
+    text-align: left;
+    color: #fff;
+    font-size: large;
+}
+/*.blog__description--sub-title,
+.blog__description--details {
+    text-align: left;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .blog__description--details {
+        display: none;
+    }
+}
+
+.blog__description--details {
+    margin: 1rem 0;
+}
+
+.blog__description--link {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    text-align: left;
+}*/
+
+.blog__description--link-icon {
+    color: white;
+    margin-top: 1rem;
+}
+
 /*--------------------------------------*/
 
 
@@ -436,7 +544,7 @@ footer{
 
 .contact__icon--anchortag{
     display: block;
-    padding: 1.25rem 1.75rem 0.25rem;
+    padding: 1.25rem 1.5rem 0.25rem;
 }@media screen and (max-width: 600px){
     .contact__icon--anchortag{
         padding: 1.25rem 1rem;
