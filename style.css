@@ -200,7 +200,7 @@ nav{
 /* General Main */
 section{
     height: 100%;
-    min-height: 44rem;
+    min-height: 45rem;
 }
 
 .container {
@@ -220,6 +220,10 @@ section{
     margin-top: 2rem;
     margin-bottom: 1.25rem;
 }
+.colored-text{
+    color: var(--custom-dblue);
+}
+
 
 /* Intro (Page 1) */
 
@@ -304,7 +308,21 @@ section{
 }
 
 
-/* Skills (Page 2) */
+/* About Me */
+
+.about-me__description{
+    padding: 2.5rem 0;
+}
+
+@media screen and (max-width: 600px){
+    .about-me__description h2{
+        font-size: large;
+    }
+}
+
+
+
+/* Skills (Page 3) */
 
 .language__list{
     display: flex;
@@ -350,7 +368,7 @@ section{
 }
 
 
-/* Projects (Page 3) */
+/* Projects (Page 4) */
 
 .project__list {
     padding-top: 2.5rem;
@@ -449,7 +467,7 @@ section{
     margin-top: 0.5rem;
 }
 
-/* Blogs (Page 4) */
+/* Blogs (Page 5) */
 
 .blog__list {
     padding-top: 2.5rem;
