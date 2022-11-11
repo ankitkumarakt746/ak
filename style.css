@@ -201,6 +201,10 @@ nav{
 section{
     height: 100%;
     min-height: 45rem;
+}@media screen and (max-width: 600px){
+    section{
+        min-height: 48rem;
+    }
 }
 
 .container {
