@@ -232,7 +232,7 @@ section{
 /* Intro (Page 1) */
 
 #intro{
-
+    height: calc(100vh - 4rem);
 }
 
 .intro__container{
@@ -313,6 +313,9 @@ section{
 
 
 /* About Me */
+#about-me{
+    height: calc(100vh - 4rem);
+}
 
 .about-me__description{
     padding: 2.5rem 0;
